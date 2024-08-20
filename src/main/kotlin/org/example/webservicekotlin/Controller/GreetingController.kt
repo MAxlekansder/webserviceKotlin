@@ -21,6 +21,11 @@ class GreetingController(private val userService: UserService) {
         return "hello pårej din madderfakker $name"
     }
 
+    @GetMapping("/helloOrDefualt")
+    fun greetUserWithUserParamOrDefaultValue(@RequestParam(name = "name", defaultValue = "world") name: String): String {
+        return "hello $name"
+    }
+
     @GetMapping("/helloservice")
     fun greetUserFromServiceClass(): String {
         return userService.greetUserFromService();
