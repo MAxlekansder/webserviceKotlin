@@ -41,4 +41,4 @@ out/
 
 
 ### Application properties ##
-**/src/resources/application.properties/
+src/resources/application.properties
